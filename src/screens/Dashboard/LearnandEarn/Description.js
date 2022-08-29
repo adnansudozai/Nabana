@@ -12,7 +12,9 @@ const Description = (props) => {
   const [conentindex,setconentindex]=useState(0)
   const [btnshow,setbtnshow]=useState(false)
   const [activeindex,setactiveindex]=useState(0)
-
+//  console.log('====================================');
+//  console.log();
+//  console.log('====================================');
   const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
   function onSwipeLeft(){
     console.log('SWIPE_LEFT')
