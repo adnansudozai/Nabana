@@ -48,6 +48,7 @@ const ResponsiveText = ({
                {marginRight:marginRight?marginRight:0},
                {width:props.width},
                 { fontFamily: fontFamily ? fontFamily : undefined },
+              
             ]}>
             {children}
         </Text>

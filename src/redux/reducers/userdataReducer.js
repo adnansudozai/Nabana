@@ -1,13 +1,15 @@
 import {
   TOTALSCORE,
   REGISTER_USER,
-  REMBEMBERME
+  REMBEMBERME,
+  COMPLETECOURSES
 } from '../types';
 const initState = {
   totalScore: 0,
   user:[],
   isLogin:false,
-  isRemember:false
+  isRemember:false,
+  completed:[]
   
 };
 const userdataReducer = (state = initState, action) => {
@@ -28,6 +30,11 @@ const userdataReducer = (state = initState, action) => {
       return {
         ...state,
         isRemember:action.isRemember
+      };
+    case COMPLETECOURSES:
+      return {
+        ...state,
+        completed:action.completed
       };
     default:
       return state;

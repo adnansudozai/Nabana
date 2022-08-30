@@ -5,6 +5,7 @@ export const AppTheme = {
     activetextColor:'#FBA00E',
     texinputbackground:'#3C416B',
     bordercolor:'#202253',
-    txtgray:'#767A9A'
+    txtgray:'#767A9A',
+    darktext:'#A3A7CF'
     
 };

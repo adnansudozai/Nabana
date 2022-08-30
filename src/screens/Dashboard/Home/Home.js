@@ -66,6 +66,7 @@ image: iconPath.Bitcoinbaner
         <Container backgroundColor={AppTheme.tabBackGroundcolor} style={{backgroundColor:AppTheme.background}}>
             <View style={styles.mainContainer}>
                 <Header profileImage={"https://www.adobe.com/express/create/media_11b1adffc91b8e6206e56adab00fa2bb4da3e694a.jpeg?width=400&format=jpeg&optimize=medium"}
+                navigation={props.navigation}
                  
                   />
             </View>

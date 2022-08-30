@@ -54,7 +54,7 @@ const Login = (props) => {
             db.transaction(tx => {
                 tx.executeSql(
                   'SELECT * FROM Users where Email=? AND Password=?',
-                  [email,password],
+                  [email.trim(),password.trim()],
                   (tx, results) => {   
                 if (results.rows.length>0) {
                       

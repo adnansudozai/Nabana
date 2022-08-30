@@ -15,31 +15,38 @@
                
                     heading:'Cryptocurrency',
                     content:'A cryptocurrency is a form of digital currency that is decentralized and secured through the implementation of cryptography and decentralization.',
-                   blankimage:iconPath.Blankcontent,
+                   blankimage:iconPath.Cryptocurrency,
              }
                 ,
                 {
              
                             heading:'Bitcoin',
                             content:'The biggest and most popular cryptocurrency. ',
+                            blankimage:iconPath.bitcoin,
+
                   },
                
                 {
                    
                     heading:'Blockchain Technology',
                     content:'The technology utilized by cryptocurrencies to function. It functions like a collective ledger of transactions maintained by a decentralized network of computers.',
+                    lotijason:require('../assets/Lotifiles/blockchain.json')
              },
             {
           
                     heading:'Mining/Staking',
                     content:'In essence, to maintain the integrity of the blockchain, it is secured by a network of computers. As a reward, the computers are awarded a certain amount of cryptocurrency. This process is called mining/staking (depending on the consensus mechanism used by the blockchain).',
+                    lotijason:require('../assets/Lotifiles/crypto-mining.json')
+
             }
                 ,
                 {
                   
                     heading:'Types of Coins Based on Consensus Mechanism:',
                     pointHeading:'Proof-of-work',
-                    content:'In this system, the miners compete against each other by solving complex mathematical problems to update the blockchain. The successful miner would then be awarded with coins.'
+                    content:'In this system, the miners compete against each other by solving complex mathematical problems to update the blockchain. The successful miner would then be awarded with coins.',
+                    blankimage:iconPath.proofofwork,
+
                 }
 
 ,
@@ -47,7 +54,9 @@
                 
                     heading:'Types of Coins Based on Consensus Mechanism:',
                     pointHeading:'Proof-of-sake',
-                    content:'in this system, the validators stake coins within the network to secure the blockchain. The more coins they stake, the higher their chance of being picked as the validator to update the blockchain and thus get awarded with coins.'
+                    content:'in this system, the validators stake coins within the network to secure the blockchain. The more coins they stake, the higher their chance of being picked as the validator to update the blockchain and thus get awarded with coins.',
+                    blankimage:iconPath.profofstake,
+
                  
                 }
                 ,
@@ -55,42 +64,56 @@
                  
                     heading:'Types of Coins Based on Purpose:',
                     pointHeading:'Stablecoins',
-                    content:'are centralized cryptocurrencies pegged to a real-world currency by assets or algorithms.'
+                    content:'are centralized cryptocurrencies pegged to a real-world currency by assets or algorithms.',
+                    blankimage:iconPath.stablecoin,
+
              },
             {
               
                 heading:'Types of Coins Based on Purpose:',
                 pointHeading:'Memecoins',
-                content:'are coins or tokens developed as jokes and inspired by internet memes.'
+                content:'are coins or tokens developed as jokes and inspired by internet memes.',
+                blankimage:iconPath.dogecoin,
+
           },
         {
          
             heading:'Types of Coins Based on Purpose:',
             pointHeading:'Defi (Decentralized Finance)',
             content:'are coins or tokens meant to function as a currency that can be traded and leveraged.',
+            blankimage:iconPath.defidecentralized,
+
      },
     {
      
         heading:'Types of Coins Based on Purpose:',
         pointHeading:'DAO (Decentralized Autonomous Organization)',
         content:'are coins or tokens that function as shares in a traditional company where holders can cast votes on how the blockchain is run.',
+        blankimage:iconPath.daodecentralized,
+
  },
             {
                     heading:'Common Slangs in Crypto',
                     pointHeading:'Moon',
                     content:'Refers to the event when the price of a coin rapidly rises.',
+                blankimage:iconPath.moon,
+
                  }  ,
                 {
                   
                         heading:'Common Slangs in Crypto',
                         pointHeading:'DYOR',
                         content:'Abbreviation for “do your own research”',
+                         blankimage:iconPath.Dyor,
+
                     }   ,
                     {
                        
                             heading:'Common Slangs in Crypto',
                             pointHeading:'ATH',
                             content:'Abbreviation for “all-time-high.” It is a term used to describe an asset’s price.',
+                           blankimage:iconPath.Ath,
+
                             
                          }   ,
                         {
@@ -98,6 +121,8 @@
                                 heading:'Common Slangs in Crypto',
                                 pointHeading:'ATL',
                                 content:'Abbreviation for “all-time-low.” It is also a term used to describe an asset’s price.',
+                              blankimage:iconPath.Atl,
+
                                 
                            }   ,
                             {
@@ -105,12 +130,16 @@
                                     heading:'Common Slangs in Crypto',
                                     pointHeading:'FOMO',
                                     content:'Abbreviation for “fear of missing out.” It usually refers to the act of buying an asset because of the fear of missing out on it.',
+                                    blankimage:iconPath.fomo,
+
         }   ,
                                 {
                                     
                                         heading:'Common Slangs in Crypto',
                                         pointHeading:'HODL',
                                         content:'Abbreviation for “Hold on to dear life.” It is the act of not selling an asset despite unfavorable market conditions.',
+                                         blankimage:iconPath.Hodl,
+
                                         
                                      }      
 
@@ -274,19 +303,24 @@
                
                     heading:'Blockchain',
                     content:'A decentralized distributed ledger that gets updated every time a transaction happens within the system. Miners or validators secure it and as an incentive, they are awarded coins for successfully updating the blockchain.',
+                    lotijason:require('../assets/Lotifiles/introblockchain.json')
+
             }
                 ,
                 {
                   
                             heading:'Double Spending',
                             content:'One of the main issues with digital currency. Double spending happens when a coin gets spent twice and thus duplicated. In cryptocurrencies, this problem is solved through the blockchain since every transaction that happens is recorded in it.',
+                   blankimage:iconPath.Doublespending,
+
                 },
                
                 {
                    
                     heading:'Consensus Mechanisms',
                     content:'To secure the blockchain, only selected entities can update it. The way these entities are selected is called the consensus mechanism. As of this writing, two of the most commonly used mechanisms are:',
-               
+                   blankimage:iconPath.consensus,
+                    
               
               
              },
@@ -294,6 +328,7 @@
             {
                         heading:'Proof-of-work',
                         content:'To be chosen as the entity to update the blockchain in a PoW system, the computer first needs to solve complex equations (mine) and compete with the other miners in the network. Some examples of coins that use this mechanism are Bitcoin and Ethereum.'
+                   ,blankimage:iconPath.blockchainproofofwork,
                      
                 },
 
@@ -301,16 +336,24 @@
                         
                             heading:'Proof-of-sake',
                             content:'To be chosen as the entity to update the blockchain in a PoS system, the computer first needs to stake the system’s native coin within the network. The more coins the validator staked, the more likely it is to be chosen to update the blockchain. Some examples of coins that use this mechanism are Cardano and Avalanche.'
-                     },
+                   ,blankimage:iconPath.blockchainstacke,
+                                
+                           },
             {
                     heading:'Mining',
                     content:'The act of securing the blockchain by competing with other miners to update the ledger.',
+                    lotijason:require('../assets/Lotifiles/introblockcrypto-mining.json')
+                  
+
            }
                 ,
                 {
                
                     heading:'Staking',
                     content:'The act of securing the blockchain by staking coins within the network to get a chance to update the ledger.'
+                   
+                   , blankimage:iconPath.stacking,
+
                  
                 }
                 ,
@@ -318,12 +361,15 @@
                   
                     heading:'Validators',
                     content:'Validators are individuals who have staked coins in a PoS blockchain and thus validate transactions.'
+                    ,blankimage:iconPath.validators,
+
             },
 
             {
                
                     heading:'Hard Cap',
                     content:'The total amount of coins that exist in a blockchain is called the hard cap. For example, there are only 21 million bitcoins available; there is no way of exceeding that number.'
+                   ,blankimage:iconPath.hardcap,
                     
                     
                 }     ,
@@ -331,6 +377,7 @@
                    
                         heading:'Coin Burning',
                         content:'In cryptocurrencies with no hard cap, the blockchain usually removes coins from circulation and thus maintains the coin’s monetary value.'
+                   ,blankimage:iconPath.burning,
                         
                   }     
 
@@ -489,19 +536,23 @@
               
                     heading:'Crypto Wallet',
                     content:'The safest way to hold cryptocurrencies is by using crypto wallets or digital wallets. These are decentralized programs that cannot be opened by anyone except the person who knows its seed phrase.',
+                   blankimage:iconPath.cryptwallet1,
+
              }
                 ,
                 {
                   
                             heading:'Seed Phrase',
                             content:'A series of words (usually 12 or 24)created during the wallet’s creation used to recover a wallet in case the owner forgets their wallet password.',
-                 },
+                   blankimage:iconPath.seedphrase,
+                },
                
                 {
                  
                     heading:'Different Types of Crypto/Digital Wallets:',
                     pointHeading:'Hot Wallet',
-                    content:'A crypto wallet connected to the internet. The user can store, send and receive coins with it.'
+                    content:'A crypto wallet connected to the internet. The user can store, send and receive coins with it.',
+                    blankimage:iconPath.hotwallet,
               
               
              },
@@ -509,7 +560,9 @@
                
                 heading:'Different Types of Crypto/Digital Wallets:',
                 pointHeading:'Cold Wallet / Hardware Wallet',
-                content:'A crypto wallet not connected to the internet and thus lessens the risk of it being compromised.'
+                content:'A crypto wallet not connected to the internet and thus lessens the risk of it being compromised.',
+                blankimage:iconPath.coldwallet,
+
                    
             
           
@@ -519,43 +572,57 @@
             heading:'Different Types of Crypto/Digital Wallets:',
             pointHeading:'Custodial Wallet',
             content:'This is a centralized crypto wallet. Unlike the decentralized ones, this is not secured by a seed phrase but is backed and managed by a company. Due to regulation, this type of wallet requires the users to submit KYC.'
+            ,blankimage:iconPath.custodil,
+
         
      },
     {
       
         heading:'Different Types of Crypto/Digital Wallets:',
         pointHeading:'KYC',
-        content:'An abbreviation for “know your customer.” This refers to information that allows the company to verify the identity of their customers, this includes name, birthdate, valid ID, etc.'
+        content:'An abbreviation for “know your customer.” This refers to information that allows the company to verify the identity of their customers, this includes name, birthdate, valid ID, etc.',
+        blankimage:iconPath.Kyc,
+
              
   },
             {
            
                     heading:'Mining',
                     content:'The act of securing the blockchain by competing with other miners to update the ledger.',
+                    lotijason:require('../assets/Lotifiles/girl-working-on-data-research.json')
+
              }
                 ,
                 {
                    
                     heading:'Staking',
-                    content:'The act of securing the blockchain by staking coins within the network to get a chance to update the ledger.'
+                    content:'The act of securing the blockchain by staking coins within the network to get a chance to update the ledger.',
+                    blankimage:iconPath.stakingwalet,
+
                  
                }
                 ,
                 {
                   
                     heading:'Validators',
-                    content:'Validators are individuals who have staked coins in a PoS blockchain and thus validate transactions.'
+                    content:'Validators are individuals who have staked coins in a PoS blockchain and thus validate transactions.',
+        blankimage:iconPath.validatorswallet,
+
              },
 
             {
                     heading:'Hard Cap',
-                    content:'The total amount of coins that exist in a blockchain is called the hard cap. For example, there are only 21 million bitcoins available; there is no way of exceeding that number.'
+                    content:'The total amount of coins that exist in a blockchain is called the hard cap. For example, there are only 21 million bitcoins available; there is no way of exceeding that number.',
+        blankimage:iconPath.hardcapwallet,
+
                     
                  }     ,
                 {
 
                         heading:'Coin Burning',
-                        content:'In cryptocurrencies with no hard cap, the blockchain usually removes coins from circulation and thus maintains the coin’s monetary value.'
+                        content:'In cryptocurrencies with no hard cap, the blockchain usually removes coins from circulation and thus maintains the coin’s monetary value.',
+                     blankimage:iconPath.burningwalet,
+
                         
                         
                     }     
@@ -758,6 +825,8 @@
                
                     heading:'ICO',
                     content:'An abbreviation of “Initial Coin Offering,” it is where early investors can buy coins of a new cryptocurrency. It also serves as a way for the team to get funding for the crypto project.',
+                    lotijason:require('../assets/Lotifiles/ico.json')
+
                 }
             
                 ,
@@ -765,6 +834,8 @@
                    
                             heading:'Whitepaper',
                             content:'When a company or a team wants to launch a cryptocurrency, they prepare a document called a whitepaper. It contains all the information that an investor would like to know about the coin/token that the company is launching.',
+                     blankimage:iconPath.whitepaper,
+
                             
                         
                         }
@@ -773,7 +844,8 @@
                   
                     heading:'Tokenomics',
                     content:'A combination of the words token and economics which is a part of the whitepaper detailing how the coins will be distributed, how much will be allocated for marketing, how much will be available for the ICO, and how much the team will be held, etc.'
-
+                    ,blankimage:iconPath.Tokenomics,
+                    
               
               
               
@@ -782,7 +854,9 @@
             {
               
                 heading:'Roadmap',
-                content:'Another part of a whitepaper outlines the future plans for the project and how the team will achieve it.'
+                content:'Another part of a whitepaper outlines the future plans for the project and how the team will achieve it.',
+                blankimage:iconPath.roadmap,
+
 
 },
                
@@ -790,6 +864,8 @@
                  
                     heading:'Litepaper',
                     content:'Litepaper is a summarized and shorter version of a whitepaper.',
+                    blankimage:iconPath.litepaper,
+
               
               
               
@@ -799,27 +875,35 @@
             {
                     heading:'Airdrop',
                     content:'An airdrop is an act of giving away free coins/tokens by the company or team. The coins are often deposited directly to the crypto wallets of the people who are qualified for the airdrop.',
+                    blankimage:iconPath.airdrop,
+
                 }
             
                 ,
                 {
                
                     heading:'Blockchain Explorer',
-                    content:'As the name implies, this is a tool that is used to explore the blockchain and track transactions, total number of holders, wallets that contain most of the coins, etc.'
+                    content:'As the name implies, this is a tool that is used to explore the blockchain and track transactions, total number of holders, wallets that contain most of the coins, etc.',
+                    blankimage:iconPath.Blockchainexplorer,
+
                  
                 }
                 ,
                 {
                   
                     heading:'Liquidity Pool',
-                    content:'In traditional markets, there needs to be both a buyer and a seller for a trade to happen. With a liquidity pool, there can only be one of either i.e. you can buy without a seller or you can sell without a buyer. This is done by providing an initial pool of tokens that the users can trade with.'
+                    content:'In traditional markets, there needs to be both a buyer and a seller for a trade to happen. With a liquidity pool, there can only be one of either i.e. you can buy without a seller or you can sell without a buyer. This is done by providing an initial pool of tokens that the users can trade with.',
+                    blankimage:iconPath.liquidity,
+
                 }
             ,
 
             {
                 
                     heading:'Locked Liquidity',
-                    content:'One of the biggest risks of liquidity pools is when the developers will take all the coins/tokens to gain money and dump the coin’s price. This can be avoided by locking the liquidity for a certain period of time so that the team cannot take any tokens out of the pool.'
+                    content:'One of the biggest risks of liquidity pools is when the developers will take all the coins/tokens to gain money and dump the coin’s price. This can be avoided by locking the liquidity for a certain period of time so that the team cannot take any tokens out of the pool.',
+                    blankimage:iconPath.lockliquidity,
+
                     
                     
                                         }
@@ -951,6 +1035,8 @@
               
                     heading:'DeFi',
                     content:'A shortened form of the term Decentralized Finance. These coins are meant to function as traditional currency which can be traded and leveraged.',
+                    blankimage:iconPath.defi,
+
                 }
             
                 ,
@@ -958,6 +1044,8 @@
                         {
                             heading:'Decentralized Exchange',
                             content:'A decentralized exchange is a crypto exchange that is unregulated by any entity. To function, it primarily uses liquidity pools to facilitate trading.',
+                    blankimage:iconPath.uniswapdefi,
+
   
                         }
                 ,
@@ -966,6 +1054,8 @@
                   
                     heading:'Yield Farming',
                     content:'Yield farming is the act of maximizing cryptocurrency yield through various methods.',
+                    blankimage:iconPath.yieldfarming,
+
               
               
               
@@ -975,6 +1065,8 @@
          
                     heading:'Stablecoins',
                     content:'Stablecoins are cryptocurrencies that are pegged to a real-world currency like USDT and USD for example. Stablecoins maintain their peg through asset reserves or algorithmic formulas.',
+                    blankimage:iconPath.defistablecoin,
+
                 }
          
                 
@@ -1105,7 +1197,8 @@
                
                     heading:'NFTs',
                     content:'An abbreviation of the term Non-fungible Tokens which are tokens minted in the blockchain which is used to prove ownership of an asset. In essence, it functions like a certificate of ownership.',
-                    blankimage:iconPath.Nftcontent,
+                    blankimage:iconPath.nftsnicker,
+
                     
                 
                 }
@@ -1115,6 +1208,7 @@
                         {
                             heading:'Minting',
                             content:'This is the process of making an NFT for an asset like pictures, music, domain names, etc. Once minted, the owner has the option of selling it to an NFT marketplace.',
+                            blankimage:iconPath.cryptominting,
   
                         }
                 ,
@@ -1123,6 +1217,7 @@
                    
                     heading:'Marketplace',
                     content:'To trade NFTs, it first needs to be listed in an NFT marketplace. Currently, the most popular ones are Opensea, Rarible, and SuperRare.',
+                    blankimage:iconPath.nftmarketplace,
               
               
               
@@ -1132,6 +1227,8 @@
             
                     heading:'Smart Contracts',
                     content:'To mint an NFT, the blockchain uses smart contracts which are essentially immutable programs in the blockchain which implement an action when certain criteria are met.',
+                    blankimage:iconPath.nftcertificate,
+               
                 }
             
                 
@@ -1275,17 +1372,22 @@ content:[
               
         heading:'NABANA Ecosystem',
         content:'The NABANA Ecosystem is a crypto startup that is one of the first to open a physical shop for cryptocurrencies where people can buy products and trade. It came from the Japanese word nabana which means “Healthy Vegetables.”',
+        lotijason:require('../assets/Lotifiles/earth-day.json')
+
     },
     {
       
         heading:'Total Supply',
        content:'The NABANA Ecosystem is powered by the NABANA Token with a hard cap of 700 million tokens.',
+    blankimage:iconPath.token,
+
       }
    ,
    
     {
         heading:'KwH System',
         content:'KwH stands for Knowledge, Wealth & Health. To provide value to their customers, the NABANA Ecosystem implements the KwH system which are key aspects that they will focus on',
+    blankimage:iconPath.kwh,
         
   }
 ,
@@ -1293,13 +1395,17 @@ content:[
    
     heading:'Knowledge',
     content:'The NABANA Ecosystem believes that applied knowledge is power and thus aims to empower its users with knowledge that they can use in their lives.'
-   },
+,    lotijason:require('../assets/Lotifiles/sharing-knowledge.json')
+   
+},
         
 
 {
   
     heading:'Wealth',
     content:'The NABANA Ecosystem believes that wealth is a result of applied knowledge and healthy well-being. To kickstart this, they would award NABANA tokens to their users for accomplishing certain tasks.'
+,    lotijason:require('../assets/Lotifiles/wealthy-businesswoman-with-cash.json')
+    
 },
         
         
@@ -1308,6 +1414,9 @@ content:[
   
     heading:'Health',
     content:'The NABANA Ecosystem values health above everything and thus encourages its users to take care of theirs through the implementation of “burn and earn.”'
+,    lotijason:require('../assets/Lotifiles/fitness-gym.json')
+  
+
 }
 
       
@@ -1318,6 +1427,8 @@ content:[
 
     heading:'Products',
     content:'To earn NABANA Tokens, one can avail and use any of the following NABANA products.',
+   lotijason:require('../assets/Lotifiles/app-development.json')
+
     
     }
 ,
@@ -1325,14 +1436,18 @@ content:[
    
     heading:'Products',
     pointHeading:'Learn&Earn',
-    content:'Earn NABANA tokens by learning about cryptocurrencies, DeFi, NFTs, etc.'
+    content:'Earn NABANA tokens by learning about cryptocurrencies, DeFi, NFTs, etc.',
+   lotijason:require('../assets/Lotifiles/education-forum.json')
+
         }
     
     ,
       {
                     heading:'Products',
                      pointHeading:'Burn&Earn',
-                     content:'Take care of your health and earn NABANA tokens by running or walking.'
+                     content:'Take care of your health and earn NABANA tokens by running or walking.',
+   lotijason:require('../assets/Lotifiles/running-businessman.json')
+
                     }
                
             ,
@@ -1340,7 +1455,10 @@ content:[
                
                        heading:'Products',
                         pointHeading:'Stake&Earn',
-                        content:'Earn more NABANA tokens by staking them.'
+                        content:'Earn more NABANA tokens by staking them.',
+                        blankimage:iconPath.nabanastake,
+
+
                     }
            
             ,
@@ -1348,7 +1466,9 @@ content:[
               
                         heading:'Products',
                         pointHeading:'Refer&Earn',
-                        content:'Refer the NABANA Ecosystem to your friends and earn NABANA tokens.'
+                        content:'Refer the NABANA Ecosystem to your friends and earn NABANA tokens.',
+                        blankimage:iconPath.refer,
+
                      }
               
                                     
@@ -1356,13 +1476,17 @@ content:[
                 {
                              heading:'Products',
                             pointHeading:'Shop&Earn' ,
-                            content:'Shop in NABANA partner stores and earn NABANA tokens as a reward.'
+                            content:'Shop in NABANA partner stores and earn NABANA tokens as a reward.',
+                        blankimage:iconPath.nabanashop,
+
                         }
                          ,
                            {
                                   heading:'Products',
                                  pointHeading:'NABANA Online Crypto Exchange',
-                                content:'Swap cryptocurrencies with NABANA Crypto Swap.'
+                                content:'Swap cryptocurrencies with NABANA Crypto Swap.',
+                                lotijason:require('../assets/Lotifiles/crypto-mobile-exchange.json')
+ 
                        }
                                   
 ],

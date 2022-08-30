@@ -43,7 +43,7 @@ const Courses = (props) => {
         console.log(item,'djlfdjflkdjfkljdl');
         return(
             <View style={styles.flatlistmainview}>
-                <TouchableOpacity onPress={()=>props.navigation.navigate('Description',{item:item,title:item.name,blankimage:item.blankimage})}style={{borderWidth:0,alignItems:'center'}}>
+                <TouchableOpacity onPress={()=>props.navigation.navigate('Description',{item:item,title:item.name,blankimage:item.blankimage,category:props.route.params.title})}style={{borderWidth:0,alignItems:'center'}}>
                 <Image source={item.image} style={styles.imagestyle} resizeMode='contain'/>
 
                 </TouchableOpacity>

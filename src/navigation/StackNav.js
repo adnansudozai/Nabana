@@ -13,6 +13,7 @@ import Description from '../screens/Dashboard/LearnandEarn/Description'
 import Questions from '../screens/Dashboard/LearnandEarn/Questions';
 import Login from '../screens/Auth/Login/Login';
 import Signup from '../screens/Auth/Signup/Signup';
+import Scoredetail from '../screens/Dashboard/Scoredetail/Scoredetail';
 
 const Stack = createNativeStackNavigator();
 function StackNav() {
@@ -27,6 +28,7 @@ function StackNav() {
         <Stack.Screen name="Courses" component={Courses} />
         <Stack.Screen name="Questions" component={Questions} />
         <Stack.Screen name="Description" component={Description} />
+        <Stack.Screen name="Scoredetail" component={Scoredetail} />
 
       </Stack.Navigator>
     </NavigationContainer>

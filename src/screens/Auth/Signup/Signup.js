@@ -40,7 +40,7 @@ const saveTodatabase=()=>{
             tx.executeSql(
               'INSERT INTO Users(Name, Email,Password,Score) VALUES (?,?,?,?)',
               [
-                name,email,password,0
+                name,email.trim(),password.trim(),0
               ],
               (tx, results) => {
                 console.log('results=====>>', results);

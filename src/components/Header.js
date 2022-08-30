@@ -29,7 +29,7 @@ const Header = (props) => {
 
       function earningcalculate(num) {
        
-        let num2= num/100
+        let num2= num*0.10
         if (num2 >= 1000000000) {
            return (num / 1000000000).toFixed(1).replace(/\.0$/, '') + 'G';
         }
@@ -55,7 +55,9 @@ const Header = (props) => {
 
 
              
-                <View style={styles.points}>
+                <TouchableOpacity onPress={()=>props.navigation.navigate('Scoredetail',{
+                    dolorscore:earningcalculate(props.totalScore),nabanascore:abbreviateNumber(props.totalScore)
+                })} style={styles.points}>
                 <View>
 
                 <ResponsiveText
@@ -97,7 +99,7 @@ const Header = (props) => {
 
 
 </View>
-</View>
+</TouchableOpacity>
              
                
                 <View style={styles.notificationProfilecontainer}>
@@ -120,9 +122,9 @@ const Header = (props) => {
                 </View>
             </View>
             {props.name &&(
-            <View style={{borderWidth:0,marginBottom:20,marginHorizontal:18}}>
+            <View style={{borderWidth:0,marginBottom:20,marginHorizontal:wp(6)}}>
     <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',borderWidth:0,paddingBottom:15}}>
-<View>
+<View style={{borderWidth:0,width:wp(70)}}>
 <ResponsiveText
                     color={AppTheme.textColorWhite}
                     size="h6"
@@ -154,8 +156,8 @@ const Header = (props) => {
 
 </View>
 
-<View style={{borderWidth:0}}>
-<Image source={props.profileimage} style={styles.profileicon} />
+<View style={{borderWidth:0,alignItems:"center",justifyContent:"center"}}>
+<Image source={props.profileimage} style={styles.profileicon} resizeMode='contain' />
 
 </View>
 
@@ -267,6 +269,7 @@ borderRightWidth:2
     profileicon: {
         width: wp(15),
         height: wp(15),
+       
      
     },
     search: {

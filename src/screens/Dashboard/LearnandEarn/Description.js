@@ -5,6 +5,7 @@ import { wp,hp} from '../../../FontResponsiveness/FontResponsiveness';
 import {ScrollView} from 'react-native-virtualized-view';
 import { useSwipe } from '../../../components/Useswipe';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
+import LottieView from 'lottie-react-native';
 
 const Description = (props) => {
 
@@ -12,10 +13,10 @@ const Description = (props) => {
   const [conentindex,setconentindex]=useState(0)
   const [btnshow,setbtnshow]=useState(false)
   const [activeindex,setactiveindex]=useState(0)
-//  console.log('====================================');
-//  console.log();
-//  console.log('====================================');
-  const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
+ console.log('====================================');
+ console.log(props.route.params.title);
+ console.log('====================================');
+
   function onSwipeLeft(){
     console.log('SWIPE_LEFT')
     console.log('totalnumberofcontent next',totalnumberofcontent);
@@ -99,7 +100,7 @@ function onSwipeRight(){
             <View style={styles.textview}>
             <ResponsiveText
                   color={AppTheme.textColorWhite}
-                  size="h4"
+                  size="h5"
                   fontWeight={'bold'}
 
                  
@@ -114,7 +115,7 @@ function onSwipeRight(){
             <View style={{marginTop:10,borderWidth:0,alignItems:"center"}}>
            <ResponsiveText
                   color={AppTheme.textColorWhite}
-                  size="h4"
+                  size="h5"
                   fontWeight={'bold'}
 
                  
@@ -143,10 +144,22 @@ function onSwipeRight(){
   )}
            
          {item.blankimage?
-         <View style={{borderWidth:0,marginVertical:10,alignItems:'center',marginTop:hp(10)}}>
-         <Image source={item.blankimage} style={styles.imagestyle} resizeMode='stretch'/>
+         <View style={{borderWidth:0,marginVertical:2,alignItems:'center',marginTop:hp(10)}}>
+         <Image source={item.blankimage} style={styles.imagestyle} resizeMode='contain'/>
 
 
+         </View>
+         :null}
+         {item.lotijason?
+         <View style={{borderWidth:0,marginVertical:5,alignItems:'center',marginTop:hp(6)}}>
+         
+         <LottieView
+              style={styles.lottieStyle}
+              source={item.lotijason}
+              autoPlay={true}
+              loop={true}
+              speed={2}
+            />
          </View>
          :null}
 
@@ -156,7 +169,8 @@ function onSwipeRight(){
     }
     return (
         <Container backgroundColor={AppTheme.tabBackGroundcolor} style={{backgroundColor:AppTheme.background}}>
-        <Header/>
+        <Header
+          navigation={props.navigation}/>
         {/* <FlatList
                     data={props.route.params.item.content[conentindex].descreption}
                     keyExtractor={(item, index) => index.toString()}
@@ -186,7 +200,9 @@ function onSwipeRight(){
                <Button
                title={'Quiz'}
                onPress={()=>props.navigation.navigate('Quiz',{
-                Quiz:props.route.params.item.Quiz
+                Quiz:props.route.params.item.Quiz,
+                category:props.route.params.category,
+                coursename:props.route.params.title
                })}
                />
                         
@@ -200,7 +216,7 @@ function onSwipeRight(){
 export default Description;
 
 const styles = StyleSheet.create({
-    flatlistmainview:{borderWidth:0,marginHorizontal:wp(1),marginTop:hp(6)},
+    flatlistmainview:{borderWidth:0,marginHorizontal:wp(1),marginTop:hp(10)},
     textview:{borderWidth:0,marginTop:hp(1.5),alignItems:"center"},
     contentview:{borderWidth:0,marginTop:hp(1.5),alignItems:"center",flexDirection:'row',justifyContent:"space-between"},
     scrolview:{borderWidth:1,borderColor:'red',flex:1},
@@ -214,6 +230,11 @@ const styles = StyleSheet.create({
     },
     imagestyle:{width:wp(85),height:hp(28)},
     swap:{borderWidth:0,alignSelf:'center',borderColor:'red',position:'absolute',bottom:hp(50),flexDirection:'row',justifyContent:'space-between',width:wp(99)},
-    swapimage:{width:35,height:35}
+    swapimage:{width:35,height:35},
+    lottieStyle:{
+      width:wp(85),height:hp(28)
+  
+    
+    }
 });
 

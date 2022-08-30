@@ -1,7 +1,8 @@
 import {
   TOTALSCORE,
   REGISTER_USER,
-  REMBEMBERME
+  REMBEMBERME,
+  COMPLETECOURSES
 } from '../types';
 
 export const savePoints = data => {
@@ -21,5 +22,11 @@ export const rememberData = data => {
   return {
     type: REMBEMBERME,
     isRemember:data
+  };
+};
+export const savecompletecourse = data => {
+  return {
+    type: COMPLETECOURSES,
+    completed:data
   };
 };

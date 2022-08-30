@@ -1,4 +1,5 @@
 export const TOTALSCORE = 'TOTALSCORE';
 export const REGISTER_USER = 'REGISTER_USER';
 export const REMBEMBERME = 'REMBEMBERME';
+export const COMPLETECOURSES = 'COMPLETECOURSES';
 

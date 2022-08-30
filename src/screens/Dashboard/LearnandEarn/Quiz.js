@@ -6,11 +6,13 @@ import {ScrollView} from 'react-native-virtualized-view';
 import { connect } from "react-redux";
 import { savePoints } from '../../../redux/actions/userDataAction';
 import {openDatabase} from 'react-native-sqlite-storage';
-import { regisretuser } from '../../../redux/actions/userDataAction';
+import { regisretuser,savecompletecourse } from '../../../redux/actions/userDataAction';
 import LinearGradient from 'react-native-linear-gradient';
 
 const Quiz = (props) => {
-
+console.log('====================================');
+console.log(props.route.params);
+console.log('====================================');
   const [selected,setselected]=useState('')
   const [questionindex,setquestionindex]=useState(0)
   const [points,setpoints]=useState(0)
@@ -120,8 +122,22 @@ db.transaction(tx => {
   if (results.rows.length>0) {
         
     props.regisretuser(results.rows.item(0))
+    
+    
+     let obj={
+      category:props.route.params.category,
+      coursename:props.route.params.coursename
+     }
 
+     var array1 = [...props.completed, obj];
 
+    var index = props.completed.findIndex(
+      x => x.coursename ==props.route.params.coursename ,
+    );
+    index === -1
+    ? props.savecompletecourse(array1)
+    : console.log('object already exist');
+  //  temp.push(res.rows.item(i))
      
   }})})
 
@@ -312,6 +328,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     savePoints: (data) => dispatch(savePoints(data)),
     regisretuser: (data) => dispatch(regisretuser(data)),
+    savecompletecourse: (data) => dispatch(savecompletecourse(data)),
+    
   }
 }
 const mapStateToProps = (state) => {
@@ -319,6 +337,7 @@ const mapStateToProps = (state) => {
   return {
       totalScore: state.userdataReducer.user.Score,
       id: state.userdataReducer.user.id,
+      completed: state.userdataReducer.completed,
 
   }
 }

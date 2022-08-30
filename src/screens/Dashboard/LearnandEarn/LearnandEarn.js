@@ -87,14 +87,70 @@ const namehandle=(text)=>{
                             </View>
         )
     }
+    let counttotalcompleted=(item)=>{
+
+      var res = props.completed.filter(obj=>obj.category===item.name);
+      
+   
+
+if(res.length>0){
+
+      const result = [...props.completed.reduce( (mp, o) => {
+        if (!mp.has(o.category)) mp.set(o.category, { ...o, count: 0 });
+        mp.get(o.category).count++;
+        return mp;
+    }, new Map).values()];
+    
+    console.log('result',result);
+    var foundValue = result.filter(obj=>obj.category===item.name);
+     return foundValue[0].count
+  }
+  else{
+    return 0
+  }
+
+  }
     const renderItem=({item,index})=>{
-        console.log('blankimage',item.blankimage);
+
+      // const countfunction=(item)=>{
+
+      // }
+      
+ 
+        // props.completed
+
+
         return(
             <View style={styles.flatlistmainview}>
                 <TouchableOpacity onPress={()=>props.navigation.navigate('Courses',{
                     Courses:item.Courses,title:item.name,
-                })}style={{borderWidth:0,marginHorizontal:wp(6),borderColor:'green',alignItems:'center'}}>
+                })}style={{borderWidth:0,marginHorizontal:wp(4),borderColor:'green',alignItems:'center'}}>
                 <Image source={item.banner} style={styles.imagestyle} resizeMode='stretch'/>
+                <View style={styles.numberofscore}>
+                <ResponsiveText
+                    color={'#856F45'}
+                    size="h6"
+                    fontWeight={'500'}
+                >
+                 {'Courses Completed'}{' '}
+                 </ResponsiveText>
+<View style={{alignItems: 'center',}}>
+                <ResponsiveText
+                    color={'black'}
+                    size="h5"
+                    fontWeight={'700'}
+                  
+                >
+                 {props.completed.length>0?counttotalcompleted(item):0}/
+                 <ResponsiveText
+                    color={'black'}
+                    size="h5"
+                     >
+                  {item.Courses.length}
+                </ResponsiveText>
+                </ResponsiveText>
+</View>
+                </View>
 
                 </TouchableOpacity>
                                                                
@@ -109,6 +165,7 @@ const namehandle=(text)=>{
                 profileimage={iconPath.profile}
                 logout={iconPath.logout}
                 logoutPress={()=>logoutuser()}
+                navigation={props.navigation}
                 logoPress={()=>props.navigation.navigate('BottomTab', {
                   screen: 'Home',
                 
@@ -191,6 +248,7 @@ const mapDispatchToProps = (dispatch) => {
     console.log('state===>>>', state)
     return {
         user: state.userdataReducer.user,
+        completed: state.userdataReducer.completed,
   
     }
   }
@@ -201,6 +259,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: AppTheme.background
     },
+    numberofscore:{
+      borderWidth:0,position:'absolute',top:hp(14),left:wp(2),flexDirection:'row',alignItems:"center"
+    },
     flatlistmainview:{
         borderWidth:0,borderColor:'red',alignItems:'center',justifyContent:'center',marginHorizontal:wp(3),marginTop:hp(1.5)
     },
@@ -208,7 +269,7 @@ const styles = StyleSheet.create({
         borderWidth:0,
         marginTop:hp(3),
     },
-    imagestyle:{width:wp(85),height:hp(20)},
+    imagestyle:{width:wp(90),height:hp(20)},
     centeredView: {
         flex: 1,
         justifyContent: "center",
