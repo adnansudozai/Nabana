@@ -150,7 +150,7 @@ function onSwipeRight(){
 
          </View>
          :null}
-         {item.lotijason && Platform.OS=='ios' ?
+         {item.lotijason ?
          <View style={{borderWidth:0,marginVertical:5,alignItems:'center',marginTop:hp(6)}}>
          
          <LottieView
@@ -189,7 +189,7 @@ function onSwipeRight(){
               loop={false}
               autoplay={false}
               onSnapToItem={(index) =>checkcontent(index)}
-
+              
             />
 
             {!btnshow?pagination():null}

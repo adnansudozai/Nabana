@@ -9,7 +9,7 @@ import { CommonActions } from "@react-navigation/routers";
 import { rememberData } from '../../../redux/actions/userDataAction';
 import { regisretuser } from '../../../redux/actions/userDataAction';
 import {openDatabase} from 'react-native-sqlite-storage';
-
+// import LottieView from 'lottie-react-native';
 const LearnandEarn = (props) => {
     const [alertModel,setalertModel]=useState(false);
     const [name,setname]=useState(props.user.Name);
@@ -173,6 +173,21 @@ if(res.length>0){
               
                 
                 />
+
+
+
+
+                {/* teast loti */}
+
+                {/* <LottieView
+              style={{    
+                width:70,
+                height:70}}
+              source={require('./sharing-knowledge.json')}
+              autoPlay={true}
+              loop={true}
+              speed={2} 
+         /> */}
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom:Platform.OS=='ios'?hp(10):hp(12)}} style={styles.Fullcontainer}>
          
                 <View style={{marginHorizontal:wp(3),marginTop:hp(3)}}>

@@ -25,27 +25,50 @@ const Scoredetail = (props) => {
                     size="h5"
                     fontWeight={'500'}
                 >
-                 {'MY TOTAL NABANA Balance'}
+                 {'Nabana Balance'}
                  </ResponsiveText>
                  <View style={styles.nabanascore}>
-                 <Image source={iconPath.nabanatoken} style={styles.nabanatoken} resizeMode='contain'/>
+                 {/* <Image source={iconPath.nabanatoken} style={styles.nabanatoken} resizeMode='contain'/> */}
 
 
-                 <ResponsiveText
+
+                <View style={{borderWidth:0}}>
+                <ResponsiveText
                     color={AppTheme.textColorWhite}
                     size="h5"
                     marginLeft={6}
 
                 >
-                 {props.route.params.nabanascore}
+                 {'    Points'} /
                  </ResponsiveText>
-                 </View>
+                 <View style={{flexDirection:'row',alignItems:"center",borderWidth:0,justifyContent:'center'}}>
+                 <Image source={iconPath.nabanatoken} style={styles.nabanatoken} resizeMode='contain'/>
                  <ResponsiveText
                     color={AppTheme.textColorWhite}
                     size="h5"
+                   
+
                 >
-                 ${props.route.params.dolorscore}
+                 {props.route.params.nabanascore} / 
                  </ResponsiveText>
+                 </View>
+                 </View>
+                <View style={{borderWidth:0}}>
+                <ResponsiveText
+                    color={AppTheme.textColorWhite}
+                    size="h5"
+                >
+                 {' '+'USD'}
+                 </ResponsiveText>
+                <ResponsiveText
+                    color={AppTheme.textColorWhite}
+                    size="h5"
+                >
+                 { ` $${props.route.params.dolorscore}`}
+                 </ResponsiveText>
+                </View>
+                 </View>
+                
             </View>
             </View>
             <View
@@ -106,7 +129,7 @@ export default Scoredetail;
 const styles = StyleSheet.create({
     scoreimageview:{borderWidth:0,marginTop:hp(5),marginHorizontal:wp(5),alignItems:"center"},
     scoreimage:{width:wp(88),height:hp(15)},
-    nabanatoken:{width:wp(8),height:wp(8),borderWidth:0},
+    nabanatoken:{width:wp(5),height:wp(5),borderWidth:1,alignSelf:'center'},
     insideview:{position:'absolute',borderWidth:0,alignSelf:'center',alignItems:'center',top:hp(3)},
     nabanascore:{flexDirection:'row',alignContent:'center',alignItems:'center',marginTop:5,marginBottom: 5,},
     textview:{borderWidth:0,marginTop:hp(4),marginHorizontal:wp(5)}
