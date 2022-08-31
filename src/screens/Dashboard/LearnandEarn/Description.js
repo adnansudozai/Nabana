@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { View, StyleSheet ,FlatList,TouchableOpacity,Image} from 'react-native';
+import { View, StyleSheet ,Platform,TouchableOpacity,Image} from 'react-native';
 import {Button,ResponsiveText,Container,iconPath,AppTheme,Header} from '../../../components/index';
 import { wp,hp} from '../../../FontResponsiveness/FontResponsiveness';
 import {ScrollView} from 'react-native-virtualized-view';
@@ -150,7 +150,7 @@ function onSwipeRight(){
 
          </View>
          :null}
-         {item.lotijason?
+         {item.lotijason && Platform.OS=='ios' ?
          <View style={{borderWidth:0,marginVertical:5,alignItems:'center',marginTop:hp(6)}}>
          
          <LottieView
