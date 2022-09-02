@@ -368,7 +368,7 @@
             {
                
                     heading:'Hard Cap',
-                    content:'The total amount of coins that exist in a blockchain is called the hard cap. For example, there are only 21 million bitcoins available; there is no way of exceeding that number.'
+                    content:'The hard cap is the maximum number of tokens that can be sold during an ICO crowdfunding.'
                    ,blankimage:iconPath.hardcap,
                     
                     

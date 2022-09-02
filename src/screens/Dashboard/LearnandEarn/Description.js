@@ -6,7 +6,7 @@ import {ScrollView} from 'react-native-virtualized-view';
 import { useSwipe } from '../../../components/Useswipe';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import LottieView from 'lottie-react-native';
-
+import FastImage from 'react-native-fast-image'
 const Description = (props) => {
 
   const [totalnumberofcontent,settotalNumofcontent]=useState(props.route.params.item.content.length-1)
@@ -145,8 +145,11 @@ function onSwipeRight(){
            
          {item.blankimage?
          <View style={{borderWidth:0,marginVertical:2,alignItems:'center',marginTop:hp(10)}}>
-         <Image source={item.blankimage} style={styles.imagestyle} resizeMode='contain'/>
-
+         {/* <Image source={item.blankimage} style={styles.imagestyle} resizeMode='contain'/> */}
+         <FastImage
+       source={item.blankimage} style={styles.imagestyle}
+        resizeMode={FastImage.resizeMode.contain}
+    />
 
          </View>
          :null}
@@ -189,7 +192,22 @@ function onSwipeRight(){
               loop={false}
               autoplay={false}
               onSnapToItem={(index) =>checkcontent(index)}
-              
+            layout={'stack'}
+            layoutCardOffset={wp(100)}
+            lockScrollWhileSnapping={true}
+            enableMomentum={false}
+            decelerationRate={0.25}
+           snapToAlignment={'center'}     
+           activeSlideAlignment={'center'}
+           scrollEndDragDebounceValue={0}
+           useScrollView={true}
+           useExperimentalSnap={true}
+
+           enableSnap={true}
+	disableIntervalMomentum={true}
+	shouldOptimizeUpdates
+	removeClippedSubviews={true}
+          
             />
 
             {!btnshow?pagination():null}
@@ -216,7 +234,7 @@ function onSwipeRight(){
 export default Description;
 
 const styles = StyleSheet.create({
-    flatlistmainview:{borderWidth:0,marginHorizontal:wp(1),marginTop:hp(10)},
+    flatlistmainview:{flex:1,borderWidth:0,marginHorizontal:wp(1),marginTop:hp(10)},
     textview:{borderWidth:0,marginTop:hp(1.5),alignItems:"center"},
     contentview:{borderWidth:0,marginTop:hp(1.5),alignItems:"center",flexDirection:'row',justifyContent:"space-between"},
     scrolview:{borderWidth:1,borderColor:'red',flex:1},
