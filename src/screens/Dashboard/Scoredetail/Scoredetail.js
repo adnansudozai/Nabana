@@ -129,7 +129,7 @@ export default Scoredetail;
 const styles = StyleSheet.create({
     scoreimageview:{borderWidth:0,marginTop:hp(5),marginHorizontal:wp(5),alignItems:"center"},
     scoreimage:{width:wp(88),height:hp(15)},
-    nabanatoken:{width:wp(5),height:wp(5),borderWidth:1,alignSelf:'center'},
+    nabanatoken:{width:wp(5),height:wp(5),borderWidth:0,alignSelf:'center'},
     insideview:{position:'absolute',borderWidth:0,alignSelf:'center',alignItems:'center',top:hp(3)},
     nabanascore:{flexDirection:'row',alignContent:'center',alignItems:'center',marginTop:5,marginBottom: 5,},
     textview:{borderWidth:0,marginTop:hp(4),marginHorizontal:wp(5)}
