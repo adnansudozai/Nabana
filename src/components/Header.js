@@ -49,7 +49,10 @@ const Header = (props) => {
     return (
         <View style={styles.mainContainer}>
             <View style={styles.toprowView}>
-                <TouchableOpacity onPress={props.logoPress}>
+                <TouchableOpacity onPress={()=>props.navigation.navigate('BottomTab', {
+                  screen: 'Home',
+                
+                })}>
                     <Image source={iconPath.nabanaIcon} style={styles.nabanaicon} />
                 </TouchableOpacity>
 

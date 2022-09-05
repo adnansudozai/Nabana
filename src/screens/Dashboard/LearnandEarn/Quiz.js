@@ -378,7 +378,7 @@ question:{
     linearGradient: {
  
       borderRadius: 30,
-      height:hp(6.2),
+      paddingVertical:hp(1.8),
       width:wp(85),
       alignItems:'center',
       justifyContent:'center',

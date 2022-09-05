@@ -7,6 +7,7 @@
         banner:iconPath.Cryptobanner,
        Courses:[
         { id :1,
+
             name:'Introduction to Cryptocurrency',
             image:iconPath.btcintro,
             // blankimage:iconPath.Blankcontent,
@@ -763,7 +764,7 @@
                     iscorrect:false
                    },
                    {
-                    option:'Ledger-based wallet',
+                    option:'A leather wallet',
                     iscorrect:true
                    },
                
@@ -782,7 +783,7 @@
                     iscorrect:false
                    },
                    {
-                    option:'Ledger',
+                    option:'A piece of paper',
                     iscorrect:false
                    },
                

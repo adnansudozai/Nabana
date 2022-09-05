@@ -196,7 +196,7 @@ function onSwipeRight(){
             layoutCardOffset={wp(100)}
             lockScrollWhileSnapping={true}
             enableMomentum={false}
-            decelerationRate={0.25}
+            decelerationRate={1}
            snapToAlignment={'center'}     
            activeSlideAlignment={'center'}
            scrollEndDragDebounceValue={0}

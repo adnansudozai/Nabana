@@ -15,7 +15,7 @@ const BottomTab = () => {
     
     return (
 
-<Tab.Navigator initialRouteName='Learnandearnstack' screenOptions={{
+<Tab.Navigator initialRouteName='Home' screenOptions={{
     headerShown: false,
     gestureEnabled: true,
     gestureDirection: 'horizontal',
