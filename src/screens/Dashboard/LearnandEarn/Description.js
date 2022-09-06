@@ -12,38 +12,36 @@ const Description = (props) => {
   const [totalnumberofcontent,settotalNumofcontent]=useState(props.route.params.item.content.length-1)
   const [conentindex,setconentindex]=useState(0)
   const [btnshow,setbtnshow]=useState(false)
+  const [scrollEnabled,setscrollEnabled]=useState(true)
   const [activeindex,setactiveindex]=useState(0)
- console.log('====================================');
- console.log(props.route.params.title);
- console.log('====================================');
-
+  const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
   function onSwipeLeft(){
     console.log('SWIPE_LEFT')
     console.log('totalnumberofcontent next',totalnumberofcontent);
-    if(totalnumberofcontent>=1){
-     settotalNumofcontent(totalnumberofcontent-1)
+  //   if(totalnumberofcontent>=1){
+  //    settotalNumofcontent(totalnumberofcontent-1)
     
-     setconentindex(conentindex+1)
+  //    setconentindex(conentindex+1)
    
-   }
-    else{
+  //  }
+  //   else{
     
-     setbtnshow(true)
-     console.log('Content Ended');
-   }
+  //    setbtnshow(true)
+  //    console.log('Content Ended');
+  //  }
 }
 
 function onSwipeRight(){
     console.log('SWIPE_RIGHT')
-    console.log('totalnumberofcontent prev',totalnumberofcontent);
+    setscrollEnabled(true)
 
-    if(conentindex>=1){
-        settotalNumofcontent(totalnumberofcontent+1)
+    // if(conentindex>=1){
+    //     settotalNumofcontent(totalnumberofcontent+1)
 
-        console.log('before',conentindex);
-        setconentindex(conentindex-1)
-        console.log(conentindex);
-    }
+    //     console.log('before',conentindex);
+    //     setconentindex(conentindex-1)
+    //     console.log(conentindex);
+    // }
 }
   const checkcontent=(index)=>{
      
@@ -52,7 +50,7 @@ function onSwipeRight(){
     console.log('totalnumberofcontent index',totalnumberofcontent);
        if(index==totalnumberofcontent){
               setbtnshow(true)
-
+              setscrollEnabled(false)
       
       }
        else{
@@ -171,7 +169,7 @@ function onSwipeRight(){
         );
     }
     return (
-        <Container backgroundColor={AppTheme.tabBackGroundcolor} style={{backgroundColor:AppTheme.background}}>
+        <Container onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}  backgroundColor={AppTheme.tabBackGroundcolor} style={{backgroundColor:AppTheme.background}}>
         <Header
           navigation={props.navigation}/>
         {/* <FlatList
@@ -183,32 +181,35 @@ function onSwipeRight(){
                 
                 
                 /> */}
-                  <Carousel
+               
+       <Carousel
                 data={props.route.params.item.content}
-
+              
               renderItem={_renderItem}
               sliderWidth={wp(100)}
               itemWidth={wp(100)}
               loop={false}
               autoplay={false}
               onSnapToItem={(index) =>checkcontent(index)}
-            layout={'stack'}
-            layoutCardOffset={wp(100)}
+            layout={'default'}
             lockScrollWhileSnapping={true}
-            enableMomentum={false}
-            decelerationRate={1}
+            enableMomentum={true}
+            decelerationRate={'fast'}
            snapToAlignment={'center'}     
            activeSlideAlignment={'center'}
-           scrollEndDragDebounceValue={0}
-           useScrollView={true}
+           scrollEndDragDebounceValue={0.9}
+           useScrollView={false}
            useExperimentalSnap={true}
-
            enableSnap={true}
 	disableIntervalMomentum={true}
 	shouldOptimizeUpdates
-	removeClippedSubviews={true}
-          
+	removeClippedSubviews={false}
+  inactiveSlideOpacity={1}
+	inactiveSlideScale={1}
+  scrollEnabled={scrollEnabled}
+  
             />
+
 
             {!btnshow?pagination():null}
               
