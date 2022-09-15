@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* NabanaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NabanaTests.m */; };
-		047726E128C1E18200AD444C /* www in Resources */ = {isa = PBXBuildFile; fileRef = 047726E028C1E18200AD444C /* www */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		284DFBAD28D3180F003E7F5A /* www in Resources */ = {isa = PBXBuildFile; fileRef = 284DFBAC28D3180F003E7F5A /* www */; };
 		677C16D3EF7AA339FBEB1A02 /* libPods-Nabana.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 723C526EA6B97CD123C9ED06 /* libPods-Nabana.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		88F6FE3F104E789B339EB0F9 /* libPods-Nabana-NabanaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1F4A08A767C099730A4B46 /* libPods-Nabana-NabanaTests.a */; };
@@ -31,7 +31,6 @@
 		00E356EE1AD99517003FC87E /* NabanaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NabanaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* NabanaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NabanaTests.m; sourceTree = "<group>"; };
-		047726E028C1E18200AD444C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Nabana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nabana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Nabana/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Nabana/AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Nabana/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Nabana/main.m; sourceTree = "<group>"; };
 		1ACE2DD2E7C397DD2EBF7339 /* Pods-Nabana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nabana.debug.xcconfig"; path = "Target Support Files/Pods-Nabana/Pods-Nabana.debug.xcconfig"; sourceTree = "<group>"; };
+		284DFBAC28D3180F003E7F5A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		52081DA9461A9B2F30489BFB /* Pods-Nabana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nabana.release.xcconfig"; path = "Target Support Files/Pods-Nabana/Pods-Nabana.release.xcconfig"; sourceTree = "<group>"; };
 		5E1F4A08A767C099730A4B46 /* libPods-Nabana-NabanaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nabana-NabanaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		723C526EA6B97CD123C9ED06 /* libPods-Nabana.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nabana.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +88,7 @@
 		13B07FAE1A68108700A75B9A /* Nabana */ = {
 			isa = PBXGroup;
 			children = (
-				047726E028C1E18200AD444C /* www */,
+				284DFBAC28D3180F003E7F5A /* www */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -245,7 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047726E128C1E18200AD444C /* www in Resources */,
+				284DFBAD28D3180F003E7F5A /* www in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -495,7 +495,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -522,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

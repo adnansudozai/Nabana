@@ -1,9 +1,11 @@
 import React from 'react';
+import NavigationBar from 'react-native-navbar-color';
 import { SafeAreaView, View, Dimensions, StatusBar, Platform } from 'react-native';
 const STATUS_BAR_HEIGHT = Platform.OS === "ios" ? 50 : StatusBar.currentHeight;
-
+import { AppTheme } from '.';
 function Container(props) {
-
+  NavigationBar.setColor(AppTheme.background)
+    
     return (
         <View style={{ flex: 1 }}>
         <View style={{ height: STATUS_BAR_HEIGHT, backgroundColor: props.backgroundColor }}>
